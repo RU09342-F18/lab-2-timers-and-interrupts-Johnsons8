@@ -4,7 +4,7 @@ volatile unsigned int TC1 = 0;                  // Timer set initialized to 0
 int main(void)
 {
 WDTCTL = WDTPW | WDTHOLD;                       // Disable the watchdog timer
-BCSCTL3 = LFXT1S_2;                             // Enables internal oscillator
+BCSCTL3 = LFXT1S_2;                             // Enables internal oscillator (This wasn't relavent before but yeah Dr. Google is my boi)
 P1DIR |= BIT0;                                  // Set P1.0 to output (green LED)
 P1REN |= BIT3;                                  // Enable internal resistor (Still don't really know how this actually works)
 P1OUT |= BIT3;                                  // Enable Pull-up Resistor (Don't actually know what this is but its what Dr. Google does)
